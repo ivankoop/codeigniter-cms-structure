@@ -12,11 +12,8 @@ class Dashboard extends IK_Controller {
     $data = $this->data;
 
     console_log($data);
-
     console_log($this->menu_items);
 
-    $this->load->view('inc/header',$data);
-		$this->load->view('dashboard/index');
-    $this->load->view('inc/footer');
+    paintViews($this,$data,'dashboard/index');
 	}
 }

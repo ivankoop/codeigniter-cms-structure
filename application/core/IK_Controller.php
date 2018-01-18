@@ -11,6 +11,7 @@ class IK_Controller extends CI_Controller {
 		parent::__construct();
 
     $this->load->helper('debug_helper');
+    $this->load->helper('layout_helper');
 
     $this->menu_items = array(
 

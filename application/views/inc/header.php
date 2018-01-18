@@ -39,7 +39,6 @@
                     <?php else: ?>
                       <a href="<?=$second_item['url']?>"><?=$second_item['title']?></a>
                     <?php endif; ?>
-
                   </li>
                 <?php endforeach; ?>
               </ul>
