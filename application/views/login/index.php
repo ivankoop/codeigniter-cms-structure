@@ -22,13 +22,14 @@
       <div class="card-header">Login</div>
       <div class="card-body">
         <form action="login/sign_in" method="POST" id="sign_in_form">
+          <input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" name="dXNlcl9lbWFpbA==">
+            <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" name="dXNlcl9lbWFpbA==" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="dXNlcl9wYXNzd29yZA==">
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="dXNlcl9wYXNzd29yZA==" >
           </div>
           <button class="btn btn-primary btn-block"  type="submit" form="sign_in_form" value="Submit">Submit</button>
           <!--<a class="btn btn-primary btn-block" href="index.html">Login</a>-->

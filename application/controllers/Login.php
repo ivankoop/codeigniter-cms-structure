@@ -9,9 +9,17 @@ class Login extends IK_Controller {
   }
 
   public function index() {
-    console_log("login aca");
 
-    $this->load->view('login/index');
+    $data = $this->data;
+
+    $csrf = array(
+        'name' => $this->security->get_csrf_token_name(),
+        'hash' => $this->security->get_csrf_hash()
+    );
+
+    $data['csrf'] = $csrf;
+
+    $this->load->view('login/index',$data);
 
   }
 
@@ -22,19 +30,8 @@ class Login extends IK_Controller {
     $user_email = $this->input->post(base64_encode("user_email"));
     $user_password = $this->input->post(base64_encode("user_password"));
 
-    // lol, liga el bomb por tu cara
-    if(empty($post_data)) {
-      sendBomb();
-      exit;
-    }
+    secure_input_layer($post_data, array($user_email,$user_password));
 
-    if($user_email === NULL || $user_password === NULL) {
-      sendBomb();
-      exit();
-    }
-
-  
   }
-
 
 }
