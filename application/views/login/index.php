@@ -8,11 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>SB Admin - Start Bootstrap Template</title>
-  <!-- Bootstrap core CSS-->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom fonts for this template-->
   <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template-->
   <link href="assets/css/sb-admin.css" rel="stylesheet">
 </head>
 
@@ -21,18 +18,25 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
+
+        <?php if($this->session->flashdata('error_msg') !== NULL): ?>
+          <div class="alert alert-danger" role="alert">
+            <strong>Error!</strong> <?=$this->session->flashdata('error_msg');?>
+          </div>
+        <?php endif; ?>
+
         <form action="login/sign_in" method="POST" id="sign_in_form">
           <input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
+          <input type="text" name="firstname" id="firstname" style="display: none">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" name="dXNlcl9lbWFpbA==" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="dXNlcl9wYXNzd29yZA==" >
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="dXNlcl9wYXNzd29yZA==" required >
           </div>
           <button class="btn btn-primary btn-block"  type="submit" form="sign_in_form" value="Submit">Submit</button>
-          <!--<a class="btn btn-primary btn-block" href="index.html">Login</a>-->
         </form>
       </div>
     </div>
