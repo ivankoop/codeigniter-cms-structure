@@ -7,6 +7,7 @@ class Dashboard extends IK_Controller {
 		parent::__construct();
     $this->load->helper('url');
     $this->load->library('session');
+    $this->load->helper('layout_helper');
   }
 
 	function index()
