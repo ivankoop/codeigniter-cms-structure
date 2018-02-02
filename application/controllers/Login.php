@@ -6,7 +6,7 @@ class Login extends IK_Controller {
   function __construct(){
 		parent::__construct();
     $this->load->helper('url');
-    $this->load->helper('security_helper');
+    //$this->load->helper('security_helper');
     $this->load->library('session');
     $this->load->model("Login_model");
 
@@ -62,9 +62,7 @@ class Login extends IK_Controller {
 
       $this->session->set_flashdata('error_msg', 'Invalid password or email, try again.');
       redirect(base_url('login'));
-
     }
-
 
   }
 
