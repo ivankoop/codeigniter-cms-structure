@@ -6,7 +6,7 @@ class Login extends IK_Controller {
   function __construct(){
 		parent::__construct();
     $this->load->helper('url');
-    //$this->load->helper('security_helper');
+    $this->load->helper('security_helper');
     $this->load->library('session');
     $this->load->model("Login_model");
 
