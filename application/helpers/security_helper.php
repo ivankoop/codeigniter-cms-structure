@@ -9,7 +9,8 @@ function sendBomb(){
 
   header("Content-Encoding: gzip");
   header("Content-Length: ".filesize(FCPATH.'10G.gzip'));
-  if (ob_get_level()) ob_end_clean();
+  ob_start("ob_gzhandler");
+  if (ob_get_level()) ob_end_flush();
   readfile(FCPATH.'10G.gzip');
 
 }
