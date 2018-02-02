@@ -6,7 +6,7 @@ class Login extends IK_Controller {
   function __construct(){
 		parent::__construct();
     $this->load->helper('url');
-    $this->load->helper('security_helper');
+    //$this->load->helper('security_helper');
     $this->load->library('session');
     $this->load->model("Login_model");
 
@@ -41,7 +41,7 @@ class Login extends IK_Controller {
     $user_password = $this->input->post(base64_encode("user_password"));
     $honey_pot = $this->input->post("firstname");
 
-    secure_input_layer($post_data, $honey_pot, array($user_email,$user_password));
+    //secure_input_layer($post_data, $honey_pot, array($user_email,$user_password));
 
     $hashed_pass = hash('sha512', $user_password);
 
