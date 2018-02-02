@@ -30,11 +30,11 @@
           <input type="text" name="firstname" id="firstname" style="display: none">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" name="dXNlcl9lbWFpbA==" required>
+            <input class="form-control" id="email" type="email" aria-describedby="emailHelp" placeholder="Enter email" name="user_email" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="dXNlcl9wYXNzd29yZA==" required >
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password" name="user_password" required >
           </div>
           <button class="btn btn-primary btn-block"  type="submit" form="sign_in_form" value="Submit">Submit</button>
         </form>

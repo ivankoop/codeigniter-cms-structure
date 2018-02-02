@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends IK_Controller {
+class Home extends IK_Controller {
 
   function __construct(){
 		parent::__construct();
