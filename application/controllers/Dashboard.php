@@ -23,6 +23,8 @@ class Dashboard extends IK_Controller {
       redirect(base_url('login'));
     }
 
-    paintViews($this,$data,'dashboard/index');
+    echo "holis";
+
+    //paintViews($this,$data,'dashboard/index');
 	}
 }
