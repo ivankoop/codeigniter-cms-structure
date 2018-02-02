@@ -19,7 +19,7 @@ class Login extends IK_Controller {
     $user_id = $this->session->userdata('user_id');
 
     if($user_id){
-      redirect(base_url('dashboard'));
+      //redirect(base_url('dashboard'));
     }
 
     $csrf = array(
