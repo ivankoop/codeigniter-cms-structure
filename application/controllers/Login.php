@@ -19,7 +19,7 @@ class Login extends IK_Controller {
     $user_id = $this->session->userdata('user_id');
 
     if($user_id){
-      //redirect(base_url('home'));
+      redirect(base_url('home'));
     }
 
     $csrf = array(
@@ -40,8 +40,6 @@ class Login extends IK_Controller {
     $user_email = $this->input->post("user_email");
     $user_password = $this->input->post("user_password");
     $honey_pot = $this->input->post("firstname");
-
-    //secure_input_layer($post_data, $honey_pot, array($user_email,$user_password));
 
     $hashed_pass = hash('sha512', $user_password);
 
